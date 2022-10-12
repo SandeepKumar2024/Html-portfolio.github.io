@@ -1,0 +1,314 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
+
+.slaute {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.slauteTextContainer {
+  flex: 3;
+}
+
+.saluteImgContainer {
+  flex: 1;
+}
+
+.slauteText {
+  color: rgb(60, 57, 57);
+  font-size: 60vw;
+  cursor: default;
+}
+
+.slauteImg {
+  width: 100%;
+}
+.nameConatiner {
+  height: 100vh;
+  background-color: blanchedalmond;
+  overflow: hidden;
+}
+
+.name {
+  font-size: 20vw;
+
+  color: rgb(28, 26, 26);
+  cursor: default;
+  text-align: center;
+  /* line-height: 100vh; */
+}
+.jobTitelContainer {
+  height: 100vh;
+}
+.dark {
+  background: url(./img//bg1.png);
+}
+
+.purple {
+  background: rebeccapurple url(./img//bg2.png);
+}
+.jobTitle {
+  font-size: 10vw;
+  cursor: default;
+  color: rgb(56, 50, 50);
+  text-align: center;
+  line-height: 100vh;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 100px;
+}
+.projectsTitle {
+  font-size: 10vw;
+  color: rgb(71, 69, 69);
+}
+.project {
+  display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+.phone {
+  flex: 1;
+  width: 300px;
+  height: 600px;
+  /* background-color: aqua; */
+  position: relative;
+}
+.phoneScreen {
+  width: 267px;
+  height: 570px;
+  /* background-color: red; */
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  border-radius: 30px;
+  overflow: scroll;
+}
+.phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+.phoneApp {
+  width: 100%;
+}
+
+.projectDetails {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+  /* overflow: hidden; */
+}
+
+.projectTitle {
+  font-size: 10vw;
+  color: rgb(71, 69, 69);
+}
+.projectDesc {
+  font-size: 20px;
+  color: rgb(71, 69, 69);
+  text-align: justify;
+  line-height: 20px;
+  /* overflow: hidden; */
+}
+
+.projectButton {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid gray;
+  color: rgb(60, 57, 57);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+.projectButton:hover{
+  transform: scale(1.2);
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+}
+/* .projectButton::after {
+  content:" " attr(data-href);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(56, 50, 50);
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: all 1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(210, 194, 194);
+  font-size: 15px;
+} */
+.projectButton:hover.projectButton::after {
+  transform: translateX(100%);
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  position: relative;
+  flex: 1;
+  
+}
+
+.laptopScreen{
+    width: 451px;
+    height: 283px;
+    /* background-color: red; */
+    position: absolute;
+    top: 18px;
+    left: 68px;
+    overflow: scroll;
+
+
+}
+.laptopApp{
+    width: 100%;
+}
+
+
+.laptopScreen::-webkit-scrollbar{
+    display: none;
+
+}
+
+.githubContainer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+
+}
+
+.githubTitle{
+  font-size: 100px;
+  color: rgb(71, 69, 69);
+
+}
+
+.githubChart{
+  width: 820px;
+  text-align: center;
+  
+}
+
+.dates{
+  font-size: 12px;
+  color: rgb(71, 69, 69);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+}
+.boxContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box{
+  width:15px ;
+  height: 15px;
+  border-radius: 2px;
+  background-color: rgb(60, 57, 57);
+  cursor: pointer;
+  transition: all 3s ease;
+}
+.active:nth-child(4n){
+  background-color:rgb(75, 114, 75) ;
+}
+
+.githubChart:hover .active:nth-child(2n+1){
+  background-color: rgb(30, 63, 30);
+}
+.githubChart:hover .active:nth-child(2n){
+  background-color: rgb(66, 94, 66);
+}
+
+.gitHublogo{
+  display: none;
+}
+
+@media screen and (max-width:1024px) {
+
+  .projects{
+    padding: 0 10px;
+    text-align: center;
+  }
+  .project{
+    flex-direction: column;
+    height: max-content;
+    
+
+
+  }  
+
+  
+  
+
+  .project:nth-child(2n){
+    flex-direction: column;
+  }
+  .phone,.laptop{
+    transform: none !important;
+    
+    
+  }
+ 
+  
+
+  
+
+ 
+  .githubTitle{
+    text-align: center;
+    font-size: 50px;
+    gap: 20px;
+  }
+  .githubChart{
+    display: none;
+  }
+
+  .gitHublogo{
+    color: rgb(183, 170, 170);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .gitHublogo h1{
+    text-align: center;
+  }
+
+  .gitLogo{
+    width: 100px;
+    height: 100px;
+    color: white;
+    cursor: pointer;
+  }
+}
